@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio profesional de Ingeniero Estructural. Servicios de diseño, análisis y consultoría estructural.">
+    <title>Ingeniero Estructural | Portafolio Profesional</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">ING. ESTRUCTURAL</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#portafolio" class="nav-link">Proyectos</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <!-- NOMBRE EDITABLE -->
+            <h1 class="animate-up"><span class="text-accent">INGENIERIA ESTRUCTURAL</span><br>SOLUCIONES EN INGENIERIA
+            </h1>
+            <h2 class="animate-up delay-1">MC. Felipe Adrian Brito</h2>
+            <p class="animate-up delay-2">Soluciones seguras, eficientes e innovadoras para tus proyectos de
+                construcción.</p>
+            <div class="hero-buttons animate-up delay-3">
+                <a href="#portafolio" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-outline">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 class="section-title">Sobre Mí</h2>
+                <!-- BIOGRAFÍA EDITABLE -->
+                <p>Soy un ingeniero estructural apasionado con más de 5 años de experiencia en el diseño y análisis de
+                    edificaciones. Mi enfoque combina la precisión técnica con soluciones prácticas para cada desafío de
+                    construcción.</p>
+                <p>Me especializo en normativas vigentes y el uso de diversos software para garantizar la
+                    seguridad y durabilidad de las estructuras.</p>
+
+                <h3 class="subtitle">Habilidades Técnicas</h3>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check-circle"></i> Análisis estructural</li>
+                    <li><i class="fas fa-check-circle"></i> Diseño en concreto reforzado</li>
+                    <li><i class="fas fa-check-circle"></i> Diseño en acero estructural</li>
+                    <li><i class="fas fa-check-circle"></i> Cimentaciones profundas</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="imagenes/00_perfil.jpg" class="perfil-img" alt="Foto de perfil">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section id="portafolio" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Proyectos Destacados</h2>
+
+            <!-- Filtros -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="edificaciones">Edificaciones</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="puentes">Puentes</button>
+                <button class="filter-btn" data-filter="cimentaciones">Cimentaciones</button>
+            </div>
+
+            <!-- Galería -->
+            <div class="portfolio-grid">
+                <!-- Proyecto 1 -->
+                <div class="portfolio-item" data-category="edificaciones">
+                    <div class="portfolio-img-wrapper">
+                        <img src="imagenes/proyecto1.jpg" alt="Torre Residencial Altos" class="project-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Torre Residencial Altos</h3>
+                        <p>Diseño estructural de edificio de 20 niveles.</p>
+                        <button class="btn-sm" onclick="openModal('modal-1')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="portfolio-item" data-category="industrial">
+                    <div class="portfolio-img-wrapper">
+                        <img src="imagenes/proyecto2.jpg" alt="Nave Industrial Zona Norte" class="project-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Nave Industrial Zona Norte</h3>
+                        <p>Estructura metálica de gran claro para logística.</p>
+                        <button class="btn-sm" onclick="openModal('modal-2')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="portfolio-item" data-category="puentes">
+                    <div class="portfolio-img-wrapper">
+                        <img src="imagenes/proyecto3.jpg" alt="Puente Vehicular Río Azul" class="project-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Puente Vehicular Río Azul</h3>
+                        <p>Diseño de vigas postensadas y pilas.</p>
+                        <button class="btn-sm" onclick="openModal('modal-3')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="portfolio-item" data-category="cimentaciones">
+                    <div class="portfolio-img-wrapper">
+                        <img src="imagenes/proyecto4.jpg" alt="Cimentación Torre B" class="project-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Cimentación Torre B</h3>
+                        <p>Sistema de pilotes y losa de cimentación.</p>
+                        <button class="btn-sm" onclick="openModal('modal-4')">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Mis Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-drafting-compass service-icon"></i>
+                    <h3>Diseño Estructural</h3>
+                    <p>Desarrollo de planos y cálculos para estructuras de concreto y acero cumpliendo normativas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calculator service-icon"></i>
+                    <h3>Consultoría Técnica</h3>
+                    <p>Asesoramiento experto para arquitectos y constructores sobre viabilidad estructural.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clipboard-check service-icon"></i>
+                    <h3>Revisión de Proyectos</h3>
+                    <p>Auditoría y revisión independiente de cálculos estructurales de terceros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section bg-dark">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2 class="section-title text-white">Contáctame</h2>
+                <p class="text-white">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte a hacerlo
+                    realidad de manera segura y eficiente.</p>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>ingenieriah@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+52 (999) 363-7360</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mérida, Yucatan, México</span>
+                </div>
+            </div>
+            <form class="contact-form" action="#"
+                onsubmit="event.preventDefault(); alert('Este es un formulario de demostración. Ver la sección de instrucciones para configurarlo.');">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required
+                        placeholder="Describe tu proyecto..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Ingeniero Estructural. Todos los derechos reservados.</p>
+            <p class="location-text">Ubicación: Ciudad de México</p>
+        </div>
+    </footer>
+
+    <!-- Modales de Proyectos -->
+    <!-- Modal 1 -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-1')">&times;</span>
+            <h2>Torre Residencial Altos</h2>
+            <div class="modal-body">
+                <img src="imagenes/proyecto1.jpg" alt="Torre Residencial Altos" class="modal-img">
+                <p><strong>Descripción:</strong> Edificio residencial de lujo ubicado en el centro de la ciudad. El
+                    desafío principal fue el diseño sísmico debido al tipo de suelo.</p>
+                <p><strong>Alcance:</strong> Diseño estructural completo, planos de taller y memoria de cálculo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-2')">&times;</span>
+            <h2>Nave Industrial Zona Norte</h2>
+            <div class="modal-body">
+                <img src="imagenes/proyecto2.jpg" alt="Nave Industrial Zona Norte" class="modal-img">
+                <p><strong>Descripción:</strong> Estructura de acero para centro logístico con claros de 40 metros sin
+                    columnas intermedias.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-3')">&times;</span>
+            <h2>Puente Vehicular Río Azul</h2>
+            <div class="modal-body">
+                <img src="imagenes/proyecto3.jpg" alt="Puente Vehicular Río Azul" class="modal-img">
+                <p><strong>Descripción:</strong> Puente de vigas postensadas de 250 metros de longitud.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-4')">&times;</span>
+            <h2>Cimentación Torre B</h2>
+            <div class="modal-body">
+                <img src="imagenes/proyecto4.jpg" alt="Cimentación Torre B" class="modal-img">
+                <p><strong>Descripción:</strong> Diseño de cimentación profunda con pilotes de fricción a 30 metros de
+                    profundidad.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GUÍA DE ADMINISTRACIÓN (Oculta pero disponible en código) -->
+    <!--
+    <section id="guia-admin" class="section guide-section">
+        <div class="container">
+            <h2 class="section-title">🛠️ Guía paso a paso para administrar el sitio</h2>
+            <div class="guide-content">
+
+                <div class="guide-item">
+                    <h3>1. Estructura de Carpetas</h3>
+                    <p>El sitio está organizado de la siguiente manera:</p>
+                    <ul class="code-list">
+                        <li><code>index.html</code>: El archivo principal con todo el contenido.</li>
+                        <li><code>/css/estilos.css</code>: Contiene los colores y diseños.</li>
+                        <li><code>/js/script.js</code>: Controla las animaciones y filtros.</li>
+                        <li><code>/imagenes</code>: <strong>¡Aquí debes guardar tus fotos!</strong></li>
+                        <li><code>/documentos</code>: Aquí guarda tus PDFs.</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <h3>2. Dónde colocar imágenes</h3>
+                    <p>Para agregar una foto:</p>
+                    <ol>
+                        <li>Guarda tu imagen en la carpeta <code>/imagenes</code>.</li>
+                        <li>Busca en el archivo <code>index.html</code> la sección donde quieres ponerla.</li>
+                        <li>Reemplaza el código del placeholder por:</li>
+                    </ol>
+                    <pre><code>&lt;img src="imagenes/tu-foto.jpg" alt="Descripción de la foto"&gt;</code></pre>
+                </div>
+
+                <div class="guide-item">
+                    <h3>3. Cómo agregar nuevos proyectos</h3>
+                    <p>Copia y pega el bloque de código de un proyecto existente (dentro de <code>portfolio-grid</code>)
+                        y cambia los textos. Asegúrate de cambiar el <code>data-category</code> si es de otra categoría.
+                    </p>
+                    <p>Para la ventana modal (detalle), copia un bloque de modal al final del archivo HTML y asegúrate
+                        que el ID coincida (ej. <code>onclick="openModal('modal-5')"</code> y
+                        <code>id="modal-5"</code>).
+                    </p>
+                </div>
+
+                <div class="guide-item">
+                    <h3>4. Cómo vincular PDFs</h3>
+                    <p>Sube tu PDF a la carpeta <code>/documentos</code> y usa este código en el botón de descarga:</p>
+                    <pre><code>&lt;a href="documentos/mi-archivo.pdf" target="_blank" class="btn-link"&gt;Descargar PDF&lt;/a&gt;</code></pre>
+                </div>
+
+                <div class="guide-item">
+                    <h3>5. Conectar el Formulario</h3>
+                    <p>Para recibir correos reales, puedes usar un servicio gratuito como <strong>Formspree</strong>:
+                    </p>
+                    <ol>
+                        <li>Ve a <a href="https://formspree.io" target="_blank">formspree.io</a> y regístrate.</li>
+                        <li>Crea un nuevo formulario y obtén tu URL única.</li>
+                        <li>En <code>index.html</code>, cambia la etiqueta <code>&lt;form&gt;</code> así:</li>
+                    </ol>
+                    <pre><code>&lt;form action="TU_URL_DE_FORMSPREE" method="POST"&gt;</code></pre>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
